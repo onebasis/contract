@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: MIT
 
-// File: @openzeppelin/contracts/math/Math.sol
 pragma solidity >=0.6.0 <0.8.0;
 
 /**
@@ -31,7 +30,6 @@ library Math {
     }
 }
 
-// File: @openzeppelin/contracts/math/SafeMath.sol
 pragma solidity >=0.6.0 <0.8.0;
 
 /**
@@ -190,7 +188,6 @@ library SafeMath {
     }
 }
 
-// File: @openzeppelin/contracts/token/ERC20/IERC20.sol
 pragma solidity >=0.6.0 <0.8.0;
 
 /**
@@ -267,7 +264,6 @@ interface IERC20 {
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 
-// File: @openzeppelin/contracts/utils/Address.so
 pragma solidity >=0.6.2 <0.8.0;
 
 /**
@@ -432,7 +428,6 @@ library Address {
     }
 }
 
-// File: @openzeppelin/contracts/token/ERC20/SafeERC20.sol
 pragma solidity >=0.6.0 <0.8.0;
 
 /**
@@ -503,7 +498,6 @@ library SafeERC20 {
     }
 }
 
-// File: @openzeppelin/contracts/GSN/Context.sol
 pragma solidity >=0.6.0 <0.8.0;
 
 /*
@@ -527,7 +521,6 @@ abstract contract Context {
     }
 }
 
-// File: @openzeppelin/contracts/access/Ownable.sol
 pragma solidity >=0.6.0 <0.8.0;
 
 /**
@@ -594,7 +587,6 @@ abstract contract Ownable is Context {
     }
 }
 
-// File: contracts/token/LPTokenWrapper.sol
 pragma solidity ^0.6.0;
 
 contract TokenWrapper {
@@ -626,7 +618,6 @@ contract TokenWrapper {
     }
 }
 
-// File: contracts/distribution/OneLPTokenSharePool.sol
 pragma solidity ^0.6.0;
 
 contract BNBStakePool is TokenWrapper {
@@ -642,7 +633,6 @@ contract BNBStakePool is TokenWrapper {
     mapping(address => uint256) public userRewardPerTokenPaid;
     mapping(address => uint256) public rewards;
 
-    // event RewardAdded(uint256 reward);
     event Staked(address indexed user, uint256 amount);
     event Withdrawn(address indexed user, uint256 amount);
     event RewardPaid(address indexed user, uint256 reward);

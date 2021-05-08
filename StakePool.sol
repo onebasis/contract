@@ -429,6 +429,7 @@ library Address {
 }
 
 pragma solidity >=0.6.0 <0.8.0;
+
 /**
  * @title SafeERC20
  * @dev Wrappers around ERC20 operations that throw on failure (when the token
@@ -498,6 +499,7 @@ library SafeERC20 {
 }
 
 pragma solidity >=0.6.0 <0.8.0;
+
 /*
  * @dev Provides information about the current execution context, including the
  * sender of the transaction and its data. While these are generally available
