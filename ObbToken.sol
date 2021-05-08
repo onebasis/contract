@@ -22,14 +22,8 @@ abstract contract Context {
     }
 }
 
-// The following code is from flattening this import statement in: owner\Operator.sol
-// import '@openzeppelin/contracts/access/Ownable.sol';
-// The following code is from flattening this file: @openzeppelin\contracts\access\Ownable.sol
-
 pragma solidity ^0.6.0;
 
-// Skipping this already resolved import statement found in @openzeppelin\contracts\access\Ownable.sol 
-// import "../GSN/Context.sol";
 /**
  * @dev Contract module which provides a basic access control mechanism, where
  * there is an account (an owner) that can be granted exclusive access to
@@ -513,7 +507,6 @@ library Address {
     }
 }
 
-
 /**
  * @dev Implementation of the {IERC20} interface.
  *
@@ -847,8 +840,8 @@ abstract contract ERC20Burnable is Context, ERC20 {
     }
 }
 
-contract obbToken is ERC20Burnable, Operator {
-    constructor() public ERC20('OBB', 'OBB') {
+contract ObbToken is ERC20Burnable, Operator {
+    constructor() public ERC20('One Basis Bond', 'OBB') {
         _mint(msg.sender, 1 * 10**18);
     }
 
@@ -875,6 +868,3 @@ contract obbToken is ERC20Burnable, Operator {
         super.burnFrom(account, amount);
     }
 }
-
-
-

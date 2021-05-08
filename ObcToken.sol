@@ -802,7 +802,6 @@ contract ERC20 is Context, IERC20 {
     function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual { }
 }
 
-
 /**
  * @dev Extension of {ERC20} that allows token holders to destroy both their own
  * tokens and those that they have an allowance for, in a way that can be
@@ -838,8 +837,8 @@ abstract contract ERC20Burnable is Context, ERC20 {
 }
 
 contract ObcToken is ERC20Burnable, Operator {
-    constructor() public ERC20('OBC', 'OBC') {
-        _mint(msg.sender, 10 * 10**18);
+    constructor() public ERC20('One Basis Cash', 'OBC') {
+        _mint(msg.sender, 1 * 10**18);
     }
 
     function mint(address recipient_, uint256 amount_)
@@ -865,6 +864,3 @@ contract ObcToken is ERC20Burnable, Operator {
         super.burnFrom(account, amount);
     }
 }
-
-
-
