@@ -1227,6 +1227,9 @@ contract Treasury is ContractGuard, Operator {
 
         uint256 cashSupply = IERC20(cash).totalSupply().sub(seigniorageSaved);
         uint256 percentage = cashPrice.sub(cashPriceOne);
+        if(percentage > cashPriceOne.mul(9).div(100)) {
+            percentage = cashPriceOne.mul(9).div(100);
+        }
         uint256 seigniorage = cashSupply.mul(percentage).div(1e18);
 
         if (seigniorageSaved > bondDepletionFloor) {
